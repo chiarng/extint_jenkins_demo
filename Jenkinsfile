@@ -12,7 +12,6 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'printenv'
         snApplyChanges(appSysId: "${APPSYSID}", branchName: "${BRANCH}", url: "${DEVENV}", credentialsId: "${CREDENTIALS}")
         snPublishApp(credentialsId: "${CREDENTIALS}", appSysId: "${APPSYSID}", obtainVersionAutomatically: false, url: "${DEVENV}")
       }
