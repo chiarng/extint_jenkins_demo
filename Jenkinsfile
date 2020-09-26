@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     APPSYSID = '00f35c601b2b9410fe0165f8bc4bcb06'
-    BRANCH = env.BRANCH_NAME
+    BRANCH = 'env.BRANCH_NAME'
     CREDENTIALS = '18be2029-2e62-4070-8828-dbb3aa39f0f0'
     DEVENV = 'https://chiarngdevdemo.service-now.com/'
     TESTENV = 'https://chiarngtestdemo.service-now.com/'
@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        snApplyChanges(appSysId: '${APPSYSID}', branchName: '${BRANCH}', 'url: ${DEVENV}', credentialsId: '${CREDENTIALS}')
+        snApplyChanges(appSysId: '${APPSYSID}', branchName: '${BRANCH}', url: '${DEVENV}', credentialsId: '${CREDENTIALS}')
         snPublishApp(credentialsId: '${CREDENTIALS}', appSysId: '${APPSYSID}', obtainVersionAutomatically: false, url: '${DEVENV}')
       }
     }
