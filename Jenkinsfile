@@ -15,14 +15,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        snApplyChanges(appSysId: ${APPSYSID}, branchName: ${BRANCH}, url: ${DEVENV}, credentialsId: ${CREDENTIALS})
-        snPublishApp(credentialsId: ${CREDENTIALS}, appSysId: ${APPSYSID}, obtainVersionAutomatically: false, url: ${DEVENV})
+        snApplyChanges(appSysId: '${APPSYSID}', branchName: '${BRANCH}', 'url: ${DEVENV}', credentialsId: '${CREDENTIALS}')
+        snPublishApp(credentialsId: '${CREDENTIALS}', appSysId: '${APPSYSID}', obtainVersionAutomatically: false, url: '${DEVENV}')
       }
     }
     stage('Test') {
       steps {
-        snInstallApp(credentialsId: ${CREDENTIALS}, url: ${TESTENV}, appSysId: ${APPSYSID})
-        snRunTestSuite(credentialsId: ${CREDENTIALS}, url: ${TESTENV}, testSuiteSysId: ${TESTSUITEID}, withResults: true)
+        snInstallApp(credentialsId: '${CREDENTIALS}', url: '${TESTENV}', appSysId: '${APPSYSID}')
+        snRunTestSuite(credentialsId: '${CREDENTIALS}', url: '${TESTENV}', testSuiteSysId: '${TESTSUITEID}', withResults: true)
       }
     }
     stage('Deploy to Prod') {
@@ -30,7 +30,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        snInstallApp(credentialsId: ${CREDENTIALS}, url: ${PRODENV}, appSysId: ${APPSYSID})
+        snInstallApp(credentialsId: '${CREDENTIALS}', url: '${PRODENV}', appSysId: '${APPSYSID}')
       }
     }
   }
