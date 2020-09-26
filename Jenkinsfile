@@ -7,9 +7,9 @@ pipeline {
     TESTENV = 'https://chiarngtestdemo.service-now.com/'
     PRODENV = 'https://chiarngproddemo.service-now.com/'
     TESTSUITEID = 'b1ae55eedb541410874fccd8139619fb'
-    BUILDTVERSION = '1.0.2'
-    NEXTDOTVERSION = '1.0.3'
-    NEXTMINORVERSION = '1.1.0'
+    MAJORVERSION = '1'
+    MINORVERSION = '0'
+    DOTVERSION = '3'
   }
   stages {
     stage('Build') {
