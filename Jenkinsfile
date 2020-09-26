@@ -18,14 +18,12 @@ pipeline {
         snPublishApp(credentialsId: ${CREDENTIALS}, appSysId: ${APPSYSID}, obtainVersionAutomatically: true, url: ${DEVENV})
       }
     }
-
     stage('Test') {
       steps {
         snInstallApp(credentialsId: ${CREDENTIALS}, url: ${TESTENV}, appSysId: ${APPSYSID})
         snRunTestSuite(credentialsId: ${CREDENTIALS}, url: ${TESTENV}, testSuiteSysId: ${TESTSUITEID}, withResults: true)
       }
     }
-
     stage('Deploy to Prod') {
       when {
         branch 'master'
@@ -34,6 +32,5 @@ pipeline {
         snInstallApp(credentialsId: '18be2029-2e62-4070-8828-dbb3aa39f0f0', url: ${PRODENV}, appSysId: ${APPSYSID})
       }
     }
-
   }
 }
