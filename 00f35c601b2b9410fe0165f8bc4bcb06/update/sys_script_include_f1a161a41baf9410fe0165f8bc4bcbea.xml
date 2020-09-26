@@ -14,19 +14,20 @@ extint_jenkins_demo_globalscript3.prototype = {
 	// yay another demo script
 	// some text
 	// test test test
+	// woohootest1
     type: 'extint_jenkins_demo_globalscript3'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>chiarng.lin@servicenow.com</sys_created_by>
         <sys_created_on>2020-09-26 03:13:25</sys_created_on>
         <sys_id>f1a161a41baf9410fe0165f8bc4bcbea</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>extint_jenkins_demo_globalscript3</sys_name>
         <sys_package display_value="extint_jenkins_demo" source="00f35c601b2b9410fe0165f8bc4bcb06">00f35c601b2b9410fe0165f8bc4bcb06</sys_package>
         <sys_policy/>
         <sys_scope display_value="extint_jenkins_demo">00f35c601b2b9410fe0165f8bc4bcb06</sys_scope>
         <sys_update_name>sys_script_include_f1a161a41baf9410fe0165f8bc4bcbea</sys_update_name>
         <sys_updated_by>chiarng.lin@servicenow.com</sys_updated_by>
-        <sys_updated_on>2020-09-26 06:11:31</sys_updated_on>
+        <sys_updated_on>2020-09-26 06:20:53</sys_updated_on>
     </sys_script_include>
 </record_update>
