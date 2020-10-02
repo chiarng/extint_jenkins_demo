@@ -28,15 +28,15 @@
         <sys_created_by>chiarng.lin@servicenow.com</sys_created_by>
         <sys_created_on>2020-09-25 21:33:26</sys_created_on>
         <sys_id>00f35c601b2b9410fe0165f8bc4bcb06</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_updated_by>chiarng.lin@servicenow.com</sys_updated_by>
-        <sys_updated_on>2020-09-30 21:56:03</sys_updated_on>
+        <sys_updated_on>2020-10-02 14:39:29</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>2.0.1</version>
+        <version>2.0.7</version>
     </sys_app>
 </record_update>
